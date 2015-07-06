@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="R3W-L2-cw8">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemoryIssueDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yjj-sI-2Hm">
+                                <rect key="frame" x="283" y="285" width="35" height="30"/>
+                                <state key="normal" title="Push">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="WZq-PQ-4FB" kind="show" id="nMc-bE-hGH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="yjj-sI-2Hm" secondAttribute="centerY" id="4ii-rz-lHU"/>
+                            <constraint firstAttribute="centerX" secondItem="yjj-sI-2Hm" secondAttribute="centerX" id="qER-gg-4k7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="TbH-ht-yot"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1136" y="-361"/>
+        </scene>
+        <!--Image View View Controller-->
+        <scene sceneID="t4X-6Q-6dT">
+            <objects>
+                <viewController id="WZq-PQ-4FB" customClass="ImageViewViewController" customModule="MemoryIssueDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xbo-MM-sNF"/>
+                        <viewControllerLayoutGuide type="bottom" id="qRU-4K-3e0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xbk-gr-18t">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="MemoryLeak.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pO5-qQ-ZHI" customClass="LeakyImageView" customModule="MemoryIssueDemo" customModuleProvider="target">
+                                <rect key="frame" x="132" y="132.5" width="335" height="335"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qRU-4K-3e0" firstAttribute="top" secondItem="pO5-qQ-ZHI" secondAttribute="bottom" constant="100" id="5hQ-e4-0ka"/>
+                            <constraint firstAttribute="centerY" secondItem="pO5-qQ-ZHI" secondAttribute="centerY" id="84E-jt-QJn"/>
+                            <constraint firstItem="pO5-qQ-ZHI" firstAttribute="leading" secondItem="Xbk-gr-18t" secondAttribute="leading" constant="100" id="EUG-Ck-MfK"/>
+                            <constraint firstAttribute="trailing" secondItem="pO5-qQ-ZHI" secondAttribute="trailing" constant="100" id="Q2w-Hc-z7U"/>
+                            <constraint firstAttribute="centerX" secondItem="pO5-qQ-ZHI" secondAttribute="centerX" id="Xat-T8-SPd"/>
+                            <constraint firstItem="pO5-qQ-ZHI" firstAttribute="top" secondItem="Xbk-gr-18t" secondAttribute="top" constant="100" id="z00-Hv-Sco"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="EUG-Ck-MfK"/>
+                                <exclude reference="Q2w-Hc-z7U"/>
+                                <exclude reference="z00-Hv-Sco"/>
+                                <exclude reference="5hQ-e4-0ka"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="leakyImageView" destination="pO5-qQ-ZHI" id="2Vf-du-nxx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n0c-Fc-QSw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1875" y="-361"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZRC-RH-k16">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="R3W-L2-cw8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cBp-BM-fcn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Oaj-PW-NNi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yiY-XI-w0D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="371" y="-361"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="MemoryLeak.jpg" width="335" height="335"/>
+    </resources>
+</document>
