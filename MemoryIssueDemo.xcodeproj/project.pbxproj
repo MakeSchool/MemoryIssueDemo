@@ -168,6 +168,7 @@
 		624262D91B4AE3BA00005CE3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Benjamin Encz";
 				TargetAttributes = {
@@ -429,6 +430,7 @@
 				624263021B4AE3BA00005CE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		624263031B4AE3BA00005CE3 /* Build configuration list for PBXNativeTarget "MemoryIssueDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -437,6 +439,7 @@
 				624263051B4AE3BA00005CE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
