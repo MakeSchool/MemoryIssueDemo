@@ -11,15 +11,15 @@ import UIKit
 class ImageViewViewController: UIViewController {
 
     @IBOutlet weak var leakyImageView: LeakyImageView!
-    var data: NSData?
+    var data: Data?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        leakyImageView.delegate = self;
+        leakyImageView.delegate = self
         
-        let filePath = NSBundle.mainBundle().pathForResource("Test", ofType: "txt");
-        data = NSData(contentsOfFile: filePath!);
+        let filePath = Bundle.main.path(forResource: "Test", ofType: "txt")
+        data = try? Data(contentsOf: URL(fileURLWithPath: filePath!))
     }
     
 }

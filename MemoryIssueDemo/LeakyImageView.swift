@@ -10,6 +10,6 @@ import UIKit
 
 class LeakyImageView: UIImageView {
 
-    var delegate: AnyObject?;
+    var delegate: AnyObject?
 
 }
